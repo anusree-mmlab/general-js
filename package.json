@@ -1,0 +1,27 @@
+{
+  "name": "general",
+  "version": "1.0.0",
+  "description": "Generic js features",
+  "main": "file-functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anusree-mmlab/general-js.git"
+  },
+  "author": "anusree-mmlab <anu@mobilemedialab.com.au> (https://github.com/anusree-mmlab)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anusree-mmlab/general-js/issues"
+  },
+  "homepage": "https://github.com/anusree-mmlab/general-js#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+
+        <h3>Check the console for the async await result</h3>
+
+        <script>
+
+
+            function timeoutFn() {
+                setTimeout(() => {
+                    console.log('inside async fun');
+                    return 5;
+                }, 2000);
+                
+            }
+
+
+            async function myFunction() {
+                try{
+                    //anAsynchronous operation call
+                    const res = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+
+                    let t = 'bla' // This line will be executed only after the asynchronous call is executed
+                    //console.log('response data', res.json());
+
+                    res.json().then((post) => {
+                       return post
+                    }).then((data) => {
+                       console.log('post', data)
+                    }).catch((err) => {
+                        console.log('err', err);
+                    });
+                }
+                catch(err) {
+                    console.log(err);
+                }    
+            }
+
+            /*Normal promise*/
+
+/*             function myFunction() {
+                try{
+                    //anAsynchronous operation call
+                    fetch('https://jsonplaceholder.typicode.com/posts/1').then(
+                        (post) =>  post.json())
+                    .then((dt) => console.log('dt', dt)
+                    ) 
+                    .catch((err) => {
+                        console.log('err', err);
+                    });
+                }
+                catch(err) {
+                    console.log(err);
+                }    
+            } */
+            
+            myFunction();
+        </script>
+    </body>
+</html>
